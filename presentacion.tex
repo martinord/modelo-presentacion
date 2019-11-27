@@ -1,0 +1,49 @@
+\documentclass{beamer}
+
+\usepackage[galician]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usetheme{Madrid}
+% https://www.overleaf.com/learn/latex/Beamer#Adding_effects_to_a_presentation
+
+% Configuration of counter for enumerate
+\newcounter{sauvegardeenumi}
+\newcommand{\asuivre}{\setcounter{sauvegardeenumi}{\theenumi}}
+\newcommand{\suite}{\setcounter{enumi}{\thesauvegardeenumi}}
+
+\begin{document}
+
+\title {Modelo presentación}
+
+\subtitle {Subtítulo}
+
+\author [martinord] 
+		{martinord}
+
+\date{Universidade da Coruña - \today}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Contidos}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Contidos}
+\tableofcontents
+\end{frame}
+
+\input{intro.tex}
+
+\begin{frame}
+	\centering
+	\Huge ¿Preguntas?
+\end{frame}
+\end{document}
